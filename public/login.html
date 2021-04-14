@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+       *{
+           padding: 0;
+           box-sizing: border-box;
+           margin: 0;
+           outline: none;
+            font-family: Roboto;
+       }
+       .container{
+        width: 100vw;
+        height: 100vh;
+        background: lightgrey;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       form{
+           max-width: 600px;
+           min-width: 300px;
+           background: white;
+           padding: 20px;
+           position: relative;
+       }
+       form label{
+           width: 100%;
+           margin: 15px 0;
+           display: block;
+       }
+       form label input{
+           width: 100%;
+           margin: 10px 0;
+           font-size: 16px ;
+           padding: 8px;
+           border-radius: 4px ;
+           border: 1px solid lightgrey;
+       }
+       form label p{
+           font-size: 15px;
+           font-weight: 700;
+           margin-bottom: -5px;
+           position: relative;
+       }
+       form label p::after{
+           content: '';
+           width: 20px;
+           border: 1px solid red;
+           position: absolute;
+           left: 0;
+           bottom: 0;
+           margin-top: 5px;
+           border-radius: 5px;
+       }
+       .error{
+           color: red;
+           font-size: 10px;
+           position: absolute;
+           width: 100%;
+           text-align: center;
+           top: 0;
+           left: 0;
+           padding: 10px;
+       }
+   </style>
+   <div class="container">
+       <form action="">
+           <div class="error">wrong!</div>
+           <label for="email">
+               <p>Email</p>
+               <input type="email" name="Email">
+           </label>
+           <label for="password">
+               <p>Password</p>
+               <input type="password" name="password">
+           </label>
+       </form>
+   </div>
+</body>
+</html>

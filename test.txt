@@ -1,0 +1,13 @@
+
+
+
+//////
+
+
+// bcrypt.hash('miltonkeynesbanking', 10)
+// .then(hashed=>{
+// Admin.create({
+//     email: "admin@miltonkeynesbanking.com",
+//     password: hashed
+// })   
+// })

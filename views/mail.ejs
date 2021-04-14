@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Set Email Message</title>
+    <%- include('partials/links.ejs') %>   
+</head>
+<body>
+    <div class="main switch-nav-display">
+        <!-- nav bar start -->
+        <%- include('partials/navbar') %> 
+        <!-- nav bar ends -->
+
+        <div class="right"> 
+            <div class="right-container"> 
+               <form action="/add-messages?type=mail" method="POST" enctype="application/x-www-form-urlencoded" class="new-message">
+                   <p>Mail Message</p>
+                   <textarea name="message" id="" cols="30" rows="10" style="display: none;"></textarea>
+                   <% if(data.message){ %>
+                        <div class="server-messages" style="background-color: rgb(33, 121, 33);"><%- data.message %> <p class="clear-server-messages">+</p></div>
+                    <%  } %> 
+                   <div class="editor" data-placeholder="Messages to Mail on successful registration"></div>
+                   <button type="submit">Submit</button>
+               </form>
+            </div>
+        </div>
+    </div>
+
+ <!-- Main Quill library -->
+    <%- include('partials/scripts') %> 
+</body>
+</html>

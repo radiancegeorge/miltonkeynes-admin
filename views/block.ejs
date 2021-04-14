@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Block Users</title>
+    <!-- Theme included stylesheets -->
+    <%- include('partials/links.ejs') %>   
+    
+</head>
+<body>
+    <div class="main switch-nav-display">
+        <!-- nav bar start -->
+        <%- include('partials/navbar') %> 
+       
+        <!-- nav bar ends -->
+
+        <div class="right">
+            <div class="right-container">
+                <% if(data.users.length >= 1 ){ %>
+                    <h1>Users</h1>
+               <div class="table-cover">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Full name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% const {users} = data %>
+                            <% users.forEach(user=>{%>
+                                <tr>
+                                    <td><%= user.id %> </td>
+                                    <td><%= user.fullName %> </td>
+                                    <td><%= user.email %> </td>
+                                    <td><%= user.active ? 'Active' : 'Not active'  %> </td>
+                                    <td><button class="activate-deactivate">Change</button></td>
+                                </tr>
+                            <% }) %>  
+                        </tbody>
+                    </table>
+               </div>
+               <% }else{ %>
+                    <div class="no-user">
+                        <h1>No Users Currently</h1>
+                    </div>
+              <% } %> 
+            </div>
+        </div>
+    </div>
+
+ <!-- Main Quill library -->
+ <%- include('partials/scripts') %> 
+ 
+</body>
+</html>

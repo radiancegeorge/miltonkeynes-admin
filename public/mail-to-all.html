@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mail to All</title>
+    <!-- Theme included stylesheets -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">   
+</head>
+<body>
+    <div class="main switch-nav-display">
+        <!-- nav bar start -->
+        <nav class="">
+            <ul>
+                <li><a href="">Create Welcome Message</a></li>
+                <li><a href="">Set Email Message</a></li>
+                <li><a href="">Block Accounts</a></li>
+                <li><a href="">Credit/Debit Accounts</a></li>
+                <li><a href="">Mail To All</a></li>
+            </ul>
+            <div class="close-nav arrow-out-more">
+                &#x2192;
+            </div>
+        </nav>
+        <!-- nav bar ends -->
+
+        <div class="right"> 
+            <div class="right-container">
+               <form action="" class="new-message">
+                   <p>Message to All Users</p>
+                   <textarea name="message" id="" cols="30" rows="10" style="display: none;"></textarea>
+                   <div class="server-messages" style="background-color: rgb(33, 121, 33);">success or error <p class="clear-server-messages">+</p></div>
+                   <div class="editor" data-placeholder="Message you would like to send to all users"></div>
+                   <button type="submit">Send</button>
+               </form>
+            </div>
+        </div>
+    </div>
+
+ <!-- Main Quill library -->
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="js/index.js"></script> 
+</body>
+</html>
